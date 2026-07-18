@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+   
+    <bean id="add" class="com.model.Adress">
+   
+          <property name="laneNumber"  value="1064" />
+          <property name="colony"  value="pimpari" />
+       <property name="city"  value="Pune" />
+   
+   </bean>
+   
+   <bean id="emp" class="com.model.Employee">
+   
+       <property name="empId"  value="101" />
+       <property name="empName"  value="Ajay" />
+       <property name="adress" ref="add" />
+   
+   </bean>
+   
+   
+ </beans>

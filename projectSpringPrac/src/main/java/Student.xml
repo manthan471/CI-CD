@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="stu1" class="com.model.Student">
+        
+        <property name="stu_id" value="101" />
+        <property name="stu_name" value="manthan"/>
+        <property name="exam" ref="a"/>
+        
+        </bean>
+        
+        <bean id="a" class="com.model.Exam">
+        
+        <property name="exam_id" value="1" />
+        <property name="exam_name" value="java" />
+        <property name="exam_marks" value="90" />
+        </bean>
+        
+        <bean id="stu2" class="com.model.Student">
+        
+        <constructor-arg name="stu_id" value="102" />
+        <constructor-arg name="stu_name" value="omkar" />
+        <constructor-arg name="exam" ref="b" />
+        </bean>
+        
+        <bean id="b" class="com.model.Exam">
+        
+        <constructor-arg name="exam_id" value="2" />
+        <constructor-arg name="exam_name" value="c++" />
+        <constructor-arg name="exam_marks" value="30" />
+        
+        </bean>
+        
+        
+        
+        </beans>
+        
+        

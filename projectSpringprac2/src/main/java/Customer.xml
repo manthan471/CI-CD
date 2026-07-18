@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="c1" class="com.model.Customer">
+        
+        <property name="cus_id" value="101" />
+        <property name="cus_name" value="manthan" />
+
+
+        <property name="list">
+            <list>
+                <ref bean="r1"/>
+                <ref bean="r2"/>
+            </list>
+        </property>
+    </bean>
+                                                                            
+        
+        <bean id="r1" class="com.model.Reviews"  >
+        
+        <property name="id" value="1" />
+        <property name="content" value="Best Place" />
+        </bean>
+        
+        <bean id="r2" class="com.model.Reviews"  >
+        
+        <property name="id" value="2" />
+        <property name="content" value="Best Location"  />
+        
+        </bean>
+        
+        </beans>
+        
+        
+        
+        
+

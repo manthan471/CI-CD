@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+     xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+   <bean id="a" class="com.model.Author" c:author_Id="102" c:author_name="Maxian" />
+   
+     <bean id="b" class="com.model.Book" c:book_Id="2" c:book_name="Web" c:author-ref="a" />
+  
+  </beans>

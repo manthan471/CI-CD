@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+   
+    <bean id="a" class="com.model.Author">
+   
+            <constructor-arg name="author_Id" value="101"  />
+        <constructor-arg name="author_name" value="ajay"  />
+   </bean>
+   
+   <bean id="b" class="com.model.Book">
+           <constructor-arg name="book_Id" value="1"  />
+        <constructor-arg name="book_name" value="Java"  />
+         <constructor-arg name="author" ref="a"  />
+   
+   </bean>
+   
+   
+ </beans>

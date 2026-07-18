@@ -1,0 +1,39 @@
+package com.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.dao.ActorRepository;
+import com.dao.MovieRepository;
+import com.model.Actor;
+import com.model.Movie;
+
+import Exception.ActorNotFoundException;
+
+@RestController
+public class MovieController {
+	
+	@Autowired
+    private ActorRepository actorrepo;
+	@Autowired
+	private MovieRepository movierepo;
+	
+	//add
+	@PostMapping("/add/{actorid}")
+	public void addMovie(@RequestBody Movie movie,@PathVariable int actorid) {
+		
+		    Actor actor=  actorrepo.findById(actorid).orElseThrow(()->new ActorNotFoundException("Actor not found"));
+		    movie.setActor(actor);
+		    
+		    movierepo.save(movie);
+		    
+		      
+		
+	}
+	
+	
+
+}
